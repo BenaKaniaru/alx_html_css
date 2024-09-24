@@ -1,13 +1,39 @@
+@font-face {
+  src: url(New-folder/SourceSansPro-Black.otf);
+}
+
+
+
 body {
   margin: 0;
+  font-family: sourcesanspro;
+  line-height: 1.5;
 }
 .header-banner {
   background-image: url(images/Object.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
 .header-section {
-  padding: 30px;
-  
+  padding: 30px;  
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(194,113,255);
+}
+
+a:active {
+  color: rgb(194,113,255);
 }
 
 
@@ -16,9 +42,11 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding-left: 50px;
-  width: 1103px;
+  padding-right: 50px;
+  width: 100%;
   height: 29px;
   margin: auto;
+  box-sizing:border-box;
 }
 
 .logo-image {
@@ -38,16 +66,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 800px;
+  width: auto;
   margin: auto;
   padding-top: 130px;
 }
 
 .main-heading {
   font-family: sans-serif;
-  font-size: 100px;
+  font-size: 10vw;
   color: white;
-  width: 684px;
+  width: auto;
   margin: auto;
 }
 
@@ -64,7 +92,6 @@ body {
 
 .register-button {
   display: block;
-  width: 162px;
   height: 44px;
   margin: auto;
   background-color: rgb(194,113,255);
@@ -73,22 +100,324 @@ body {
   color: white;
   font-family: sans-serif;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: lighter;
   margin-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-shadow: 2px 2px 8px whitesmoke;
+}
+
+.register-button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  font-weight: bold;
+  background-color: rgb(142, 8, 245);
 }
 
 .pros-section {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: auto;
   margin: auto;
   align-items: center;
 }
+
 .pros-heading { 
-  font-size: 32px;
+  font-size: 5vw;
   color: white;
+  margin-top: 200px;
+  margin-bottom: 60px;
+  font-family: Arial;
+  font-weight: lighter;
 }
 
 .pros-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 80px;
+  margin-bottom: 60px;
+  width: auto;
 }
+
+.pros-image {
+  width: 100%;
+  border-radius: 200px;
+  margin-bottom: 20px;
+}
+
+.pros-info {
+  width:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:auto;
+}
+
+.pros-name, .pros-achievement {
+  color: white;
+  width:auto;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.pros-achievement {
+  font-size: 12px;
+}
+
+.testimonials-part {
+  background-color: rgb(194,113,255);
+  height: 300px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  margin:auto;
+  gap: 20px;  
+}
+
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  margin:0;
+  flex: 1;
+  color: white;
+}
+
+.test-image-container {
+  width: 120px;
+}
+
+.test-image {
+  width: 100%;
+}
+
+blockquote {
+  margin: 0;
+}
+
+.popular-tutorials {
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.tutorials-container {
+  width: 1100px;
+  margin: auto;
+  
+}
+
+.tutorials-title {
+  color: black;
+  width: 294px;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.videos-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width: auto;
+  gap: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 1100px) {
+  .videos-container {
+    display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  }
+  
+}
+
+.video-info {
+  background-color: rgb(249, 244, 244);
+  height: auto;
+}
+
+.video-info:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.video-image {
+  width: 100%;
+  height: auto;
+}
+
+
+.video-description {
+  padding-left: 10px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+}
+
+.video-author {
+  display: flex;
+  flex-direction:row;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.author-image {
+  width: 30px;
+  height: 30px;
+}
+
+.author-name {
+  flex: 1;
+  margin: 0;
+  font-weight: lighter;
+  color: rgb(194,113,255);
+  font-size: 14px;
+}
+
+.video-rating {
+  display: flex;
+  flex-direction: row;
+  height: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: rgb(194,113,255);
+}
+
+.membership-section {
+  width: auto;
+  height: auto;
+  background-color: rgb(7,22,41);
+  color: white;
+  padding-bottom: 50px
+}
+
+.membership-head {
+  width: 230px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.membership-container {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width: auto;
+  margin: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@media screen and (max-width: 1100px) {
+  .membership-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: auto;
+    margin: auto;
+  }
+}
+
+.membership-info {
+  display: flex;
+  flex-direction: column;
+  column-gap: 40px;
+  padding-bottom: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.questions-section {
+  display: flex; 
+  flex-direction: column;
+  align-items: centers;
+  width: 100%;
+  background-color: transparent;
+  color: black;
+}
+
+.questions-heading {
+  width: auto;
+  margin: auto;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.faq-part {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width: auto;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1100px) {
+  .faq-part {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: auto;
+    margin: auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+}
+
+.question-response {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+footer{
+  background-color: rgb(7,22,41);
+  width: auto;
+  height: 150px;
+  align-items: center;
+}
+
+.footer-section {
+  width: 100%
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+  align-items: center;
+  z-index: 5;
+  padding: 30px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.media-image {
+  width: 30px;
+}
+
+.copyright {
+  color: white;
+  display: block;
+  width: 200px; 
+  margin: auto;
+}
+

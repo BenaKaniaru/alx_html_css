@@ -23,7 +23,7 @@ The purpose of this project is to showcase how to build a responsive webpage usi
 ## Technologies Used
 - **HTML5**: Markup language used for structuring the content.
 - **CSS3**: Styling and layout, with Flexbox and responsive design techniques.
-- **FontAwesome**: For including icons in the project (optional, if you plan to use icons).
+- **FontAwesome**: For including icons in the project.
 - **Media Queries**: Used to ensure the page is responsive on different screen sizes.
 
 ## Features

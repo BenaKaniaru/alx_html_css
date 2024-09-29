@@ -1,10 +1,41 @@
+
+@font-face {
+  font-family: 'source_sans_prosemibold';
+  src: url('webfontkit/sourcesanspro-semibold-webfont.woff2') format('woff2'),
+       url('webfontkit/stylesheet.css/sourcesanspro-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_probold';
+  src: url('webfontkit/sourcesanspro-bold-webfont.woff2') format('woff2'),
+       url('webfontkit/sourcesanspro-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url('webfontkit/sourcesanspro-regular-webfont.woff2') format('woff2'),
+       url('webfontkit/sourcesanspro-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
 .background-cover {
+  background-size:cover;
+  background-position: center;
+
   background-image:url(Images/images/headphones_hero_1.jpg);
 }
 
-body {
-  margin: 0;
-}
 
 header {
   width: 100%;
@@ -16,7 +47,7 @@ nav {
   width:auto;
   margin-left: 80px;
   margin-right: 80px;
-  box-sizing: content-box;
+  box-sizing: content-box;     
   height: 40px;
   display: flex;
   align-items: center;
@@ -25,10 +56,12 @@ nav {
 
 .image-logo {
   width: 160px;
+  height: 80%;
 }
 
 .nav-links {
-  width: 255px;
+  width: auto;
+  gap: 15px;
   display: flex;
   justify-content: space-between;
 }
@@ -37,12 +70,32 @@ a {
   color: white;
   text-decoration: none;
   font-size: 16px;
-  font-weight: bold;
+  font-family: 'source_sans_probold'
 }
 
 a:hover {
   color: rgb(255,101,101);
   text-decoration: underline;
+}
+
+@media  screen and (max-width: 780px) {
+  nav {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media  screen and (max-width: 450px) {
+  nav {
+    margin-left: 20px;
+    margin-right: 20px;  
+  }
+}
+
+@media  screen and (max-width: 550px) {
+  .nav-links {
+      
+  }
 }
 
 
@@ -55,22 +108,44 @@ a:hover {
   margin-left: 200px;
   margin-right: 200px;
   margin-top: 150px;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
   color: white;
   height: auto;
-  
-
 }
+
+@media screen and (max-width: 780px) {
+  .call-action-content {
+    margin: 75px 100px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .call-action-content {
+    margin: 30px 50px;
+  }
+}
+
 h1 {
   width: auto;
   margin: auto;
   font-size: 40px;
+  font-family: 'source_sans_probold';
+  margin: 0;
 }
 
 h3 {
   width: auto;
   font-size: 16px;
-  margin-bottom: 30px;
+  font-family: 'source_sans_prosemibold';
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+p{
+  width: auto;
+  margin: auto; 
+  font-family: 'source_sans_proregular';
+  line-height: 1.5;
 }
 
 button {
@@ -81,11 +156,276 @@ button {
   font-weight: bold;
   background-color: rgb(255,101,101);
   box-shadow: 2px 2px 10px white;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   cursor: pointer;
+  max-width: 200px;
 }
 
 button:hover, button:active {
   opacity: 0.9;
   font-weight: lighter;
+}
+
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  text-align: center;
+  padding: 80px 200px;
+}
+
+@media screen and (max-width: 780px) {
+  .section-2{
+    padding: 80px 100px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .section-2{
+    padding: 40px 50px;
+  }
+}
+
+.our-services {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  column-gap: 20px;
+  padding: 80px;
+}
+
+@media screen and (max-width: 780px) {
+  .our-services {
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 80px;
+    padding: 40px;                     
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .our-services {
+    grid-template-columns: repeat(1,1fr);
+    padding: 30px;                     
+  }
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-image {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  width: auto;
+  margin: auto;
+  font-size: 40px;
+  font-family: 'source_sans_probold';
+  margin: 0;
+}
+
+h2 {
+  width: auto;
+  font-size: 26px;
+  font-family: 'source_sans_probold';
+}
+
+h3 {
+  width: auto;
+  font-size: 16px;
+  font-family: 'source_sans_prosemibold';
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+p {
+  width: auto;
+  margin: auto; 
+  font-family: 'source_sans_proregular';
+  line-height: 1.5;
+}
+
+.results-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px 200px;
+  background-image: url(Images/images/headphones_hero_2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+@media screen and (max-width:780px) {
+  .results-section {
+    padding: 25px 100px;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .results-section {
+    padding: 25px 50px;
+  }
+}
+
+.results-section h2 {
+  margin-bottom: 40px;
+}
+
+.results-data {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  column-gap: 40px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 780px) {
+  .results-data {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .results-data {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+
+.penta-image {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0px;
+  align-items: center;
+}
+
+.input-elements {
+  display: grid;
+  grid-template-columns: repeat(1,3fr);
+  gap: 20px;
+}
+
+.contact-us input {
+  width: 400px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  border-bottom: solid rgb(183, 183, 183);
+  box-shadow: 2px 0px 8px rgb(183, 183, 183);
+}
+
+@media screen and (max-width: 450px) {
+  .contact-us input {
+    width: 280px;
+  }
+
+}
+::placeholder {
+  font-size: 14px;
+  font-family: 'source_sans_proregular';
+  color: black;
+}
+
+.contact-us input:focus {
+  outline: transparent;
+  border: solid 2px rgb(255,101,101);
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px ;
+  color: white;
+}
+
+footer h3{
+  font-size: 16px;
+  padding: 10px 0px;
+
+}
+
+@media screen and (max-width: 450px) {
+  footer h3 {
+    font-size: 12px;
+    padding: 5px 0px;
+  }
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 450px) {
+  footer {
+    padding: 0px 25px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  footer .image-logo {
+    width: 100px;
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  gap: 30px;
+}
+
+@media screen and (max-width: 450px) {
+  .social-links {
+    gap: 10px;
+  }
+}
+
+.social-image {
+  width: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .social-image {
+    width: 10px;
+  }
+}
+
+.social-image:hover {
+  cursor: pointer;
+}
+
+.fb-image {
+  height: 20px;
+  width: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .fb-image {
+    width: 5px;
+    height: 10px;
+  }
 }

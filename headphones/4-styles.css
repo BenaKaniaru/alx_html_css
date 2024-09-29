@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'source_sans_prosemibold';
+  src: url('webfontkit/sourcesanspro-semibold-webfont.woff2') format('woff2'),
+       url('webfontkit/stylesheet.css/sourcesanspro-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_probold';
+  src: url('webfontkit/sourcesanspro-bold-webfont.woff2') format('woff2'),
+       url('webfontkit/sourcesanspro-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url('webfontkit/sourcesanspro-regular-webfont.woff2') format('woff2'),
+       url('webfontkit/sourcesanspro-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+footer {
+  background-color: black;
+  display: flex;
+  width: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px ;
+  color: white;
+}
+
+footer h3{
+  font-size: 16px;
+  padding: 10px 0px;
+
+}
+
+@media screen and (max-width: 450px) {
+  footer h3 {
+    font-size: 12px;
+    padding: 5px 0px;
+  }
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 450px) {
+  footer {
+    padding: 0px 25px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  footer .image-logo {
+    width: 100px;
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  gap: 30px;
+}
+
+@media screen and (max-width: 450px) {
+  .social-links {
+    gap: 10px;
+  }
+}
+
+.social-image {
+  width: 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .social-image {
+    width: 10px;
+  }
+}
+
+.social-image:hover {
+  cursor: pointer;
+}
+
+.fb-image {
+  height: 20px;
+  width: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .fb-image {
+    width: 5px;
+    height: 10px;
+  }
+}

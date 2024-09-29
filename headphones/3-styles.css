@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'source_sans_prosemibold';
+  src: url('webfontkit/sourcesanspro-semibold-webfont.woff2') format('woff2'),
+       url('webfontkit/stylesheet.css/sourcesanspro-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_probold';
+  src: url('webfontkit/sourcesanspro-bold-webfont.woff2') format('woff2'),
+       url('webfontkit/sourcesanspro-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url('webfontkit/sourcesanspro-regular-webfont.woff2') format('woff2'),
+       url('webfontkit/sourcesanspro-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+}
+
+nav {
+  width:auto;
+  margin-left: 80px;
+  margin-right: 80px;
+  box-sizing: content-box;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-logo {
+  width: 160px;
+}
+
+.nav-links {
+  width: auto;
+  gap: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a{
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'source_sans_probold'
+}
+
+.nav-links a:hover {
+  color: rgb(255,101,101);
+  text-decoration: underline;
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0px;
+  align-items: center;
+}
+
+.input-elements {
+  display: grid;
+  grid-template-columns: repeat(1,3fr);
+  gap: 20px;
+}
+
+.contact-us input {
+  width: 400px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  border-bottom: solid rgb(183, 183, 183);
+  box-shadow: 2px 0px 8px rgb(183, 183, 183);
+}
+
+@media screen and (max-width: 450px) {
+  .contact-us input {
+    width: 280px;
+  }
+
+}
+::placeholder {
+  font-size: 14px;
+  font-family: 'source_sans_proregular';
+  color: black;
+}
+
+.contact-us input:focus {
+  outline: transparent;
+  border: solid 2px rgb(255,101,101);
+}
+
+button {
+  padding: 10px 30px;
+  border-radius: 25px;
+  border:none;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(255,101,101);
+  box-shadow: 2px 2px 10px white;
+  margin-bottom: 50px;
+  cursor: pointer;
+  max-width: 200px;
+}
+
+button:hover, button:active {
+  opacity: 0.9;
+  font-weight: lighter;
+}

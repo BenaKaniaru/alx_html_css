@@ -1,0 +1,150 @@
+
+@font-face {
+  font-family: 'source_sans_prosemibold';
+  src: url('webfontkit/sourcesanspro-semibold-webfont.woff2') format('woff2'),
+       url('webfontkit/stylesheet.css/sourcesanspro-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_probold';
+  src: url('webfontkit/sourcesanspro-bold-webfont.woff2') format('woff2'),
+       url('webfontkit/sourcesanspro-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_proregular';
+  src: url('webfontkit/sourcesanspro-regular-webfont.woff2') format('woff2'),
+       url('webfontkit/sourcesanspro-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+}
+
+nav {
+  width:auto;
+  margin-left: 80px;
+  margin-right: 80px;
+  box-sizing: content-box;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.image-logo {
+  width: 160px;
+}
+
+.nav-links {
+  width: auto;
+  gap: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links a{
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'source_sans_probold'
+}
+
+.nav-links a:hover {
+  color: rgb(255,101,101);
+  text-decoration: underline;
+}
+
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  text-align: center;
+  padding: 80px 200px;
+}
+
+@media screen and (max-width: 780px) {
+  .section-2{
+    padding: 80px 100px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .section-2{
+    padding: 40px 50px;
+  }
+}
+
+.our-services {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  column-gap: 20px;
+  padding: 80px;
+}
+
+@media screen and (max-width: 780px) {
+  .our-services {
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 80px;
+    padding: 40px;                     
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .our-services {
+    grid-template-columns: repeat(1,1fr);
+    padding: 30px;                     
+  }
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-image {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  width: auto;
+  margin: auto;
+  font-size: 40px;
+  font-family: 'source_sans_probold';
+  margin: 0;
+}
+
+h3 {
+  width: auto;
+  font-size: 16px;
+  font-family: 'source_sans_prosemibold';
+  margin-bottom: 50px;
+  margin-top: 0;
+}
+
+p {
+  width: auto;
+  margin: auto; 
+  font-family: 'source_sans_proregular';
+  line-height: 1.5;
+}

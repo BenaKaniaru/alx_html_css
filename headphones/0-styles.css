@@ -164,6 +164,7 @@ button {
 button:hover, button:active {
   opacity: 0.9;
   font-weight: lighter;
+  transition: 0.5s;
 }
 
 .section-2 {

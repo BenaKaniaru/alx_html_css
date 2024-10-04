@@ -59,11 +59,42 @@ nav {
   height: 80%;
 }
 
+.nav-link-toggle {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bar {
+  height: 1px;
+  width: 30px;
+  background-color: white;
+  border: solid white;
+  border-radius: 10px;
+}
+
+.toggle-show {
+  display: none;
+}
+
+@media screen and (min-width: 650px) {
+  .nav-link-toggle {
+    display: none;
+  }
+}
+
 .nav-links {
   width: auto;
   gap: 15px;
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 650px) {
+  .nav-links {
+    display: none;
+  }
 }
 
 a {
@@ -85,19 +116,12 @@ a:hover {
   }
 }
 
-@media  screen and (max-width: 450px) {
+@media  screen and (max-width: 500px) {
   nav {
-    margin-left: 20px;
-    margin-right: 20px;  
+    margin-left: 5px;
+    margin-right: 10px;  
   }
 }
-
-@media  screen and (max-width: 550px) {
-  .nav-links {
-      
-  }
-}
-
 
 .call-action-content {
   display: flex;
